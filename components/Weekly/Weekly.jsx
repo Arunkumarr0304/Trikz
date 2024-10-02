@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     zIndex: 100,
   },
   stack: {
-    
+    width: '33%',
   },
   content: {
     alignItems: 'center',
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   },
   rank2: {
     position: 'relative',
-    marginBottom: -50,
+    marginBottom: -55,
   },
   rank_no: {
     position: 'absolute',

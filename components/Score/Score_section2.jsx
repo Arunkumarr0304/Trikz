@@ -7,25 +7,38 @@ import ThemeContext from '../../theme/ThemeContext';
 
 const Score_section2 = () => {
     const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
-  return (
-    <View style={styles.container}>
-      <View style={styles.stack_container}>
-        {
-            tab_container_data.map((d) => (
-                <TouchableOpacity style={[styles.stack, {backgroundColor:theme.color3}]} key={d.id}>
-                    <View style={styles.left}>
-                        <Text style={styles.value}>{d.value}</Text>
-                        <Text style={styles.text}>{d.text}</Text>
-                    </View>
-                    <View style={styles.icon}>
-                    {darkMode? d.Dark_icon : d.icon}
-                    </View>
-                </TouchableOpacity>
-            ))
+
+    const getTextColor = (id) => {
+        switch(id) {
+            case 1:
+                return '#00D709';
+            case 2:
+            case 3:
+                return '#FFC700';
+            default:
+                return '#E31D1C';
         }
-      </View>
-    </View>
-  )
+    }
+
+    return (
+        <View style={styles.container}>
+            <View style={styles.stack_container}>
+                {
+                    tab_container_data.map((d) => (
+                        <TouchableOpacity style={[styles.stack, {backgroundColor: theme.color3}]} key={d.id}>
+                            <View style={styles.left}>
+                                <Text style={[styles.value,darkMode && {color: getTextColor(d.id)}]}>{d.value}</Text>
+                                <Text style={[styles.text]}>{d.text}</Text>
+                            </View>
+                            <View style={styles.icon}>
+                                {darkMode ? d.Dark_icon : d.icon}
+                            </View>
+                        </TouchableOpacity>
+                    ))
+                }
+            </View>
+        </View>
+    )
 }
 
 export default Score_section2;
@@ -70,4 +83,4 @@ const styles = StyleSheet.create({
         lineHeight: 24,
         fontFamily: 'Poppins_400Regular',
     }
-})
+});

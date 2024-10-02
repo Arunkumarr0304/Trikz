@@ -38,11 +38,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         backgroundColor: '#4F22AE',
         borderRadius: 20,
-        padding: 16,
+        paddingVertical: 16,
+        width: '100%',
     },
     tab: {
-        width: 100,
+        minWidth: '33%',
+        gap: 3,
         alignItems: 'center',
+        justifyContent: 'center',
     },
     middleTab: {
         borderLeftWidth: 0.5,
