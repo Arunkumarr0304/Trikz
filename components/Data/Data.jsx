@@ -58,6 +58,18 @@ import Again1 from "../../assets/images/again1.svg";
 import Again2 from "../../assets/images/again2.svg";
 import Again3 from "../../assets/images/again3.svg";
 
+import Cate_icon1 from "../../assets/images/cate_stack_icon1.svg";
+import Cate_icon2 from "../../assets/images/cate_stack_icon2.svg";
+import Cate_icon3 from "../../assets/images/cate_stack_icon3.svg";
+import Cate_icon4 from "../../assets/images/cate_stack_icon4.svg";
+
+import Modal_icon1 from "../../assets/images/modal_icon1.svg";
+import Modal_icon2 from "../../assets/images/modal_icon2.svg";
+import Modal_icon3 from "../../assets/images/modal_icon3.svg";
+import Modal_icon4 from "../../assets/images/modal_icon4.svg";
+
+import Dot from "../../assets/images/dark_dot.svg";
+
 export const log_method = [
     {
         id: 1,
@@ -735,5 +747,138 @@ export const Again = [
         id: 3,
         icon: <Again3 />,
         text: 'Share Score',
+    },
+]
+
+export const cate_data = [
+    {
+        id: 1,
+        text: 'All Quiz',
+    },
+    {
+        id: 2,
+        text: 'Maths',
+    },
+    {
+        id: 3,
+        text: 'Social',
+    },
+    {
+        id: 4,
+        text: 'Sports',
+    },
+    {
+        id: 5,
+        text: 'Science',
+    },
+]
+
+export const cate_data2 = [
+    {
+        id: 1,
+        image: <Cate_icon1 />,
+        heading: 'Statistics Math Quiz',
+        type: 'Math',
+        text: '• 12 Quizzes',
+    },
+    {
+        id: 2,
+        image: <Cate_icon2 />,
+        heading: 'Matrices Quiz',
+        type: 'Math',
+        text: '• 6 Quizzes',
+    },
+    {
+        id: 3,
+        image: <Cate_icon3 />,
+        heading: 'Cricket Quiz',
+        type: 'sport',
+        text: '• 6 Quizzes',
+    },
+    {
+        id: 4,
+        image: <Cate_icon4 />,
+        heading: 'History Quiz',
+        type: 'Social',
+        text: '• 6 Quizzes',
+    },
+]
+
+export const level_data = [
+    {
+        id: 1,
+        level: 'Level 1',
+        status: 'Maths • Statistics Quiz',
+        value: '40',
+        question: '30 Questiones',
+    },
+    {
+        id: 2,
+        level: 'Level 2',
+        status: 'Maths • Statistics Quiz',
+        value: '40',
+        question: '30 Questiones',
+    },
+    {
+        id: 3,
+        level: 'Level 3',
+        status: 'Maths • Statistics Quiz',
+        value: '40',
+        question: '30 Questiones',
+    },
+    {
+        id: 4,
+        level: 'Level 4',
+        status: 'Maths • Statistics Quiz',
+        value: '40',
+        question: '30 Questiones',
+    },
+    {
+        id: 5,
+        level: 'Level 5',
+        status: 'Maths • Statistics Quiz',
+        value: '40',
+        question: '30 Questiones',
+    },
+    {
+        id: 6,
+        level: 'Level 6',
+        status: 'Maths • Statistics Quiz',
+        value: '40',
+        question: '30 Questiones',
+    },
+    {
+        id: 7,
+        level: 'Level 7',
+        status: 'Maths • Statistics Quiz',
+        value: '40',
+        question: '30 Questiones',
+    },
+]
+
+export const Modal_data = [
+    {
+        id: 1,
+        icon: <Modal_icon1 />,
+        Dark_icon: <Modal_icon1 />,
+        text: 'WhatsApp',
+    },
+    {
+        id: 2,
+        icon: <Modal_icon2 />,
+        Dark_icon: <Modal_icon2 />,
+        text: 'Notion',
+    },
+    {
+        id: 3,
+        icon: <Modal_icon3 />,
+        Dark_icon: <Modal_icon3 />,
+        text: 'Facebook',
+    },
+    {
+        id: 4,
+        icon: <Modal_icon4 />,
+        Dark_icon: <Dot />,
+        text: 'More',
     },
 ]

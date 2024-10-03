@@ -1,50 +1,74 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView, StatusBar } from 'react-native';
-import React, { useContext } from 'react';
-import {router,Link} from "expo-router";
+import { Text, View, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import React, { useContext, useState } from "react";
+import { router, Link } from "expo-router";
 import Back from "../../assets/images/back.svg";
 import Dark_back from "../../assets/images/dark_back.svg";
-import { BerkshireSwash_400Regular } from '@expo-google-fonts/berkshire-swash';
-import Home_section2 from '../../components/Home/Home_section2/Home_section2';
-import Home_section3 from '../../components/Home/Home_section3/Home_section3';
-import ThemeContext from '../../theme/ThemeContext';
+import { cate_data } from "../../components/Data/Data";
+import ThemeContext from "../../theme/ThemeContext";
+import { Poppins_400Regular } from "@expo-google-fonts/poppins";
+import Category_section2 from "../../components/Category/Category_section2";
 
 const Category = () => {
     const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
-  return (
-    <View style={[styles.container, {backgroundColor:theme.background}]}>
-        <StatusBar translucent barStyle={darkMode? 'light-content' : 'dark-content'} />
-        <View style={styles.header}>
-        <TouchableOpacity onPress={() => {router.push('home')}}>
-         {darkMode? <Dark_back /> : <Back />}
-          </TouchableOpacity>
-            <Text style={[styles.heading, {color:theme.color}]}>category</Text>
+    const [active_tab, setActive_tab] = useState(cate_data[0].id);
+    const press = (id) => {
+        setActive_tab(id);
+    }
+    return (
+        <View style={[styles.container, { backgroundColor: theme.background }]}>
+            <View style={styles.header}>
+                {darkMode ? <Dark_back onPress={() => {router.push('home')}} /> : <Back onPress={() => {router.push('home')}} />}
+                <ScrollView style={styles.tab_container} horizontal={true}>
+                    {
+                        cate_data.map((d) => (
+                            <TouchableOpacity style={[styles.tab, active_tab === d.id && styles.active_tab]} onPress={() => { press(d.id) }} key={d.id}>
+                                <Text style={[styles.tab_text, active_tab === d.id && styles.active_tab_text]}>{d.text}</Text>
+                            </TouchableOpacity>
+                        ))
+                    }
+                </ScrollView>
+            </View>
+            <ScrollView showsVerticalScrollIndicator={false}>
+                <Category_section2 activeTab={active_tab} />
+            </ScrollView>
         </View>
-        <ScrollView showsVerticalScrollIndicator={false}>
-            <Home_section2 />
-            <Home_section3 />
-        </ScrollView>
-    </View>
-  )
+    );
 }
 
 export default Category;
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 50,
         paddingHorizontal: 20,
         flex: 1,
     },
     header: {
+        marginTop: '18%',
         flexDirection: 'row',
         alignItems: 'center',
-        position: 'relative',
     },
-    heading: {
-        fontSize: 24,
-        lineHeight: 34,
-        fontFamily: 'BerkshireSwash_400Regular',
-        position: 'absolute',
-        left: '38%',
+    tab_container: {
+        flexDirection: 'row',
+        marginHorizontal: 10,
+    },
+    tab: {
+        borderRadius: 9,
+        padding: 8,
+        marginHorizontal: 5,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    tab_text: {
+        fontSize: 16,
+        lineHeight: 26,
+        fontFamily: 'Poppins_400Regular',
+        color: '#6829C6',
+        textTransform: 'capitalize',
+    },
+    active_tab: {
+        backgroundColor: '#6829C6',
+    },
+    active_tab_text: {
+        color: '#ffffff',
     }
-})
+});

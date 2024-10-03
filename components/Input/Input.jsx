@@ -41,26 +41,14 @@ const Input = ({
                   width: width || '100%',
                 },
               ]}
-              placeholder=""
+              placeholder={placeholder}
+              placeholderTextColor={placeholderColor}
               keyboardType={keyboardType}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
               value={inputValue}
               onChangeText={setInputValue}
             />
-            {!isFocused && !inputValue && (
-              <Text
-                style={[
-                  styles.placeholder,
-                  {
-                    color: placeholderColor,
-                    fontFamily: 'BerkshireSwash_400Regular',
-                  },
-                ]}
-              >
-                {placeholder}
-              </Text>
-            )}
             {Icon && <Icon style={styles.icon} />}
           </View>
         </TouchableWithoutFeedback>
@@ -73,7 +61,7 @@ export default Input;
 
 const styles = StyleSheet.create({
   inputBox: {
-    gap: 5,
+    gap: 15,
   },
   label: {
     fontSize: 14,
@@ -96,9 +84,6 @@ const styles = StyleSheet.create({
     fontFamily: 'BerkshireSwash_400Regular',
   },
   placeholder: {
-    position: 'absolute',
-    left: 100,
-    top: '50%',
     transform: [{ translateY: -12 }],
     fontSize: 16,
   },

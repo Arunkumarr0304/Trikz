@@ -1,27 +1,36 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Again } from '../Data/Data';
 import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import ThemeContext from '../../theme/ThemeContext';
+import Score_section4 from './Score_section4';
 
 const Score_section3 = () => {
     const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
+    const [modalVisible2, setModalVisible2] = useState(null);
+    const press = () => {
+        setModalVisible2(true);
+    };
   return (
     <View style={styles.container}>
       <View style={styles.stack_container}>
         {
             Again.map((d) => (
                 <View style={styles.stack} key={d.id}>
-                    <View style={styles.icon_box}>
+                    <TouchableOpacity onPress={() => {press()}} style={styles.icon_box}>
                     {d.icon}
-                    </View>
-                    <TouchableOpacity style={styles.stack2}>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => {press()}} style={styles.stack2}>
                         <Text style={styles.text}>{d.text}</Text>
                     </TouchableOpacity>
                 </View>
             ))
         }
       </View>
+      <Score_section4
+      modalVisible={modalVisible2}
+      setModalVisible={setModalVisible2}
+      />
     </View>
   )
 }

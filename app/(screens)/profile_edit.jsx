@@ -11,35 +11,44 @@ import Profile_section3 from '../../components/Profile/Profile_section3/Profile_
 import ThemeContext from '../../theme/ThemeContext';
 import Profile_section4 from '../../components/Profile/Profile_section4/Profile_section4';
 import {router, Link} from "expo-router";
+import Camera from "../../assets/images/camera.svg";
+import Input from '../../components/Input/Input';
+import CountryDropdown from '../../components/AgeDropdown/AgeDropdown';
+import LanguageDropdown from '../../components/LanguageDropdown/LanguageDropdown';
+import Button from '../../components/Button/Button';
 
-const Profile = () => {
+const Profile_Edit = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
   return (
     <View style={[styles.container, {backgroundColor:theme.background}]}>
       <StatusBar translucent barStyle={darkMode? 'light-content' : 'dark-content'} />
         <View style={styles.header}>
-          <TouchableOpacity onPress={() => {router.push('home')}}>
+          <TouchableOpacity onPress={() => {router.push('profile')}}>
          {darkMode? <Dark_back /> : <Back />}
           </TouchableOpacity>
           <Text style={[styles.heading, {color:theme.color}]}>profile</Text>
         </View>
         <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.content}>
+            <View style={styles.image_box}>
           <Image style={styles.image} source={Profiles} />
-          <View style={styles.name_row}>
-          <Text style={[styles.heading2, {color:theme.color}]}>Jhon</Text>
-         {darkMode? <Dark_edit onPress={() => {router.push('(screens)/profile_edit')}} /> : <Edit onPress={() => {router.push('(screens)/profile_edit')}} />}
+          <Camera style={styles.camera} />
           </View>
         </View>
-        <Profile_section2 />
-        <Profile_section3 />
-        <Profile_section4 />
+        <View style={styles.input_container}>
+            <Input label="Change Nickname"  placeholder="jhon" />
+            <CountryDropdown label="Change Age" />
+            <LanguageDropdown label="Select Lanugage" />
+        </View>
         </ScrollView>
+        <View style={styles.button_box}>
+        <Button buttonText="Save" onPress={() => {router.push('profile')}} />
+        </View>
     </View>
   )
 }
 
-export default Profile;
+export default Profile_Edit;
 
 const styles = StyleSheet.create({
   container: {
@@ -59,14 +68,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: '40%',
   },
-  heading2: {
-    fontSize: 24,
-    lineHeight: 34,
-    fontFamily: 'BerkshireSwash_400Regular',
-  },
   content: {
     alignItems: 'center',
     marginVertical: 30,
+  },
+  image_box: {
+    maxWidth: 92,
+    maxHeight: 92,
   },
   image: {
     width: 92,
@@ -74,10 +82,24 @@ const styles = StyleSheet.create({
     borderRadius: 50,
     borderWidth: 7,
     borderColor: '#4F22AE',
+    position: 'relative',
+  },
+  camera: {
+    position: 'absolute',
+    bottom: '5%',
+    right: '5%',
+    borderWidth: 5,
+    borderColor: '#4F22AE',
   },
   name_row: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 15,
+  },
+  input_container: {
+    gap: 16,
+  },
+  button_box: {
+    marginBottom: '15%',
   }
 })
