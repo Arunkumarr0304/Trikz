@@ -8,7 +8,7 @@ import QuizContext from '../../Quiz_context/Quiz_context';
 import Lock from "../../assets/images/lock.svg";
 import Star from "../../assets/images/star2.svg";
 import Arrow from "../../assets/images/right_arrow.svg";
-import { level_data } from '../../components/Data/Data';
+import { level_data } from '../../Data/Data';
 import { Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
 import Level_section2 from '../../components/Level/level_section2';
 import Category from '../(tabs)/category';

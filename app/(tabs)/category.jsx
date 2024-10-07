@@ -3,7 +3,7 @@ import React, { useContext, useState } from "react";
 import { router, Link } from "expo-router";
 import Back from "../../assets/images/back.svg";
 import Dark_back from "../../assets/images/dark_back.svg";
-import { cate_data } from "../../components/Data/Data";
+import { cate_data } from "../../Data/Data";
 import ThemeContext from "../../theme/ThemeContext";
 import { Poppins_400Regular } from "@expo-google-fonts/poppins";
 import Category_section2 from "../../components/Category/Category_section2";

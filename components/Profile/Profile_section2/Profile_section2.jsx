@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React, { useContext } from 'react';
-import { profile_tab_data } from '../../Data/Data';
+import { profile_tab_data } from '../../../Data/Data';
 import { Poppins_700Bold } from '@expo-google-fonts/poppins';
 import ThemeContext from '../../../theme/ThemeContext';
 

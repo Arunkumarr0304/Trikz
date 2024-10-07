@@ -4,7 +4,7 @@ import ThemeContext from '../../theme/ThemeContext';
 import Lock from "../../assets/images/lock2.svg";
 import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import { BerkshireSwash_400Regular } from '@expo-google-fonts/berkshire-swash';
-import { Modal_data } from '../Data/Data';
+import { Modal_data } from '../../Data/Data';
 
 const Score_section4 = ({ modalVisible, setModalVisible }) => {
   const { theme, darkMode } = useContext(ThemeContext);

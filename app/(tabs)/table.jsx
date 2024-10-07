@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, TouchableOpacity, ScrollView, StatusBar } from 
 import React, { useContext, useState } from 'react';
 import Back from "../../assets/images/back.svg";
 import Dark_back from "../../assets/images/dark_back.svg";
-import { tab_data } from '../../components/Data/Data';
+import { tab_data } from '../../Data/Data';
 import Weekly from '../../components/Weekly/Weekly';
 import All_time from '../../components/All_time/All_time';
 import ThemeContext from '../../theme/ThemeContext';

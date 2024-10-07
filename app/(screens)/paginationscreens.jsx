@@ -6,7 +6,7 @@ import Coin from "../../assets/images/coin.svg";
 import Button from '../../components/Button/Button';
 import { router } from 'expo-router';
 import ThemeContext from '../../theme/ThemeContext';
-import { pagination_data } from '../../components/Data/Data'; 
+import { pagination_data } from '../../Data/Data'; 
 import Pagination_screens1 from '../../components/Pagination_screens/Pagination_screen1';
 import Prev from "../../assets/images/prev.svg";
 import Dark_prev from "../../assets/images/dark_prev.svg";

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-import { cate_data2 } from '../Data/Data';
+import { cate_data2 } from '../../Data/Data';
 import Arrow from '../../assets/images/right_arrow.svg';
 import ThemeContext from '../../theme/ThemeContext';
 import QuizContext from '../../Quiz_context/Quiz_context';

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React, { useContext, useState } from 'react';
-import { edit_data } from '../../Data/Data';
+import { edit_data } from '../../../Data/Data';
 import ThemeContext from '../../../theme/ThemeContext';
 import { Poppins_400Regular, Poppins_700Bold } from '@expo-google-fonts/poppins';
 

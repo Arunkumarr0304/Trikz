@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { StyleSheet, Text, View, Image, TouchableOpacity, StatusBar } from 'react-native';
 import { useFonts, BerkshireSwash_400Regular } from '@expo-google-fonts/berkshire-swash';
 import Log_bg from "../../assets/images/log_page.png";
-import { log_method } from '../../components/Data/Data';
+import { log_method } from '../../Data/Data';
 import {router, Link} from "expo-router";
 import { Poppins_400Regular, Poppins_500Medium, Poppins_600SemiBold, Poppins_700Bold, Poppins_900Black } from '@expo-google-fonts/poppins';
 import ThemeContext from '../../theme/ThemeContext';

@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'rea
 import React, { useContext, useState } from 'react';
 import Language_bg from "../../assets/images/language_page.png";
 import { BerkshireSwash_400Regular } from '@expo-google-fonts/berkshire-swash';
-import { favourite_data } from '../../components/Data/Data';
+import { favourite_data } from '../../Data/Data';
 import Button from "../../components/Button/Button";
 import {router, Link} from "expo-router";
 import ThemeContext from '../../theme/ThemeContext';

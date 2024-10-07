@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { Again } from '../Data/Data';
+import { Again } from '../../Data/Data';
 import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import ThemeContext from '../../theme/ThemeContext';
 import Score_section4 from './Score_section4';
