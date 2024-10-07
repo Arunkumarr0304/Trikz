@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TouchableOpacity, ScrollView, Image } from 'react-native';
 import React, { useContext } from 'react';
 import { BerkshireSwash_400Regular } from '@expo-google-fonts/berkshire-swash';
-import { friend_data } from '../../Data/Data';
+import { friend_data } from '../../../Data/Data';
 import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import ThemeContext from '../../../theme/ThemeContext';
 

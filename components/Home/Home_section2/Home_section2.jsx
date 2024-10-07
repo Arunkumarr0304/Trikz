@@ -3,7 +3,7 @@ import React, { useContext } from 'react'
 import { BerkshireSwash_400Regular } from '@expo-google-fonts/berkshire-swash';
 import { Poppins_400Regular, Poppins_500Medium } from '@expo-google-fonts/poppins';
 import Arrow from "../../../assets/images/arrow.svg";
-import { stack_data } from '../../Data/Data';
+import { stack_data } from '../../../Data/Data';
 import ThemeContext from '../../../theme/ThemeContext';
 
 const Home_section2 = () => {

@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity, ScrollView } from 'react-native'
 import React, { useContext } from 'react'
-import { rank_data } from '../Data/Data';
+import { rank_data } from '../../Data/Data';
 import { BerkshireSwash_400Regular } from '@expo-google-fonts/berkshire-swash';
 import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import Medal from "../../assets/images/Medal.svg";
