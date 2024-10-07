@@ -57,6 +57,7 @@ const Age_screen = () => {
                 <Text style={[styles.heading, {color:theme.color}]}>Select Your Age & Profession</Text>
                 <Text style={[styles.heading2, {color:theme.color}]}>Enter Age</Text>
                 <Age />
+                <View style={styles.slider_content}>
                 <Slider
                     style={styles.slider}
                     minimumValue={0}
@@ -73,6 +74,7 @@ const Age_screen = () => {
                     {...panResponder.panHandlers}
                 >
                     <Text style={styles.value}>{distance}</Text>
+                </View>
                 </View>
                 <Text style={[styles.heading2, {color:theme.color}]}>Choose Your Profession</Text>
                 <TouchableOpacity style={[styles.dropdown]} onPress={toggleDropdown}>
@@ -137,10 +139,11 @@ const styles = StyleSheet.create({
     slider: {
         width: 300,
         marginTop: 20,
+        position: 'relative',
     },
     box: {
         position: 'absolute',
-        top: 180,
+        top: '-55%',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#4F22AE',
@@ -188,5 +191,9 @@ const styles = StyleSheet.create({
     },
     button_box: {
         marginTop: 30,
+    },
+    slider_content: {
+        alignItems: 'center',
+        justifyContent: 'center',
     }
 });

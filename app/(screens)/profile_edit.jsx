@@ -13,9 +13,9 @@ import Profile_section4 from '../../components/Profile/Profile_section4/Profile_
 import {router, Link} from "expo-router";
 import Camera from "../../assets/images/camera.svg";
 import Input from '../../components/Input/Input';
-import CountryDropdown from '../../components/AgeDropdown/AgeDropdown';
 import LanguageDropdown from '../../components/LanguageDropdown/LanguageDropdown';
 import Button from '../../components/Button/Button';
+import AgeDropdown from '../../components/AgeDropdown/AgeDropdown';
 
 const Profile_Edit = () => {
   const { theme, darkMode, toggleTheme } = useContext(ThemeContext);
@@ -37,7 +37,7 @@ const Profile_Edit = () => {
         </View>
         <View style={styles.input_container}>
             <Input label="Change Nickname"  placeholder="jhon" />
-            <CountryDropdown label="Change Age" />
+            <AgeDropdown label="Change Age" />
             <LanguageDropdown label="Select Lanugage" />
         </View>
         </ScrollView>

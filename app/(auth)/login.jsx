@@ -82,6 +82,7 @@ const styles = StyleSheet.create({
   tab: {
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center',
     paddingVertical: 13,
     paddingHorizontal: 30,
     borderRadius: 10,

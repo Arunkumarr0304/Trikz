@@ -56,13 +56,13 @@ const LanguageDropdown = ({label}) => {
         onRequestClose={() => setModalVisible(false)}
       >
         <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
+          <View style={[styles.modalContent, {backgroundColor:theme.background, borderColor:theme.color}]}>
             <FlatList
               data={languages}
               keyExtractor={(item) => item.value}
               renderItem={({ item }) => (
                 <TouchableOpacity style={styles.option} onPress={() => selectLanguage(item)}>
-                  <Text style={styles.optionText}>{item.label}</Text>
+                  <Text style={[styles.optionText, {color:theme.color}]}>{item.label}</Text>
                 </TouchableOpacity>
               )}
             />
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
   closeButton: {
     marginTop: 10,
     alignItems: 'center',
-    backgroundColor: '#FF0000',
+    backgroundColor: 'rgba(92, 38, 186, 1)',
     padding: 10,
     borderRadius: 15,
     marginBottom: 25,

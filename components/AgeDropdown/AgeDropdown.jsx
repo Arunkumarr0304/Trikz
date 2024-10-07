@@ -69,13 +69,13 @@ const AgeDropdown = ({label}) => {
         onRequestClose={() => setModalVisible(false)}
       >
         <View style={styles.modalContainer}>
-          <View style={styles.modalContent}>
+          <View style={[styles.modalContent, {backgroundColor:theme.background}]}>
             <FlatList
               data={countries}
               keyExtractor={(item) => item.value}
               renderItem={({ item }) => (
                 <TouchableOpacity style={styles.option} onPress={() => selectLanguage(item)}>
-                  <Text style={styles.optionText}>{item.label}</Text>
+                  <Text style={[styles.optionText, {color:theme.color}]}>{item.label}</Text>
                 </TouchableOpacity>
               )}
             />
@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
   modalContent: {
     width: '80%',
     height: '50%',
-    backgroundColor: 'white',
     borderRadius: 5,
     padding: 20,
     shadowColor: '#000',
@@ -160,7 +159,7 @@ const styles = StyleSheet.create({
   closeButton: {
     marginTop: 10,
     alignItems: 'center',
-    backgroundColor: '#FF0000',
+    backgroundColor: 'rgba(92, 38, 186, 1)',
     padding: 10,
     borderRadius: 15,
     marginBottom: 25,

@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React, { useContext, useState } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Again } from '../Data/Data';
 import { Poppins_400Regular } from '@expo-google-fonts/poppins';
 import ThemeContext from '../../theme/ThemeContext';
@@ -11,29 +11,34 @@ const Score_section3 = () => {
     const press = () => {
         setModalVisible2(true);
     };
-  return (
-    <View style={styles.container}>
-      <View style={styles.stack_container}>
-        {
-            Again.map((d) => (
-                <View style={styles.stack} key={d.id}>
-                    <TouchableOpacity onPress={() => {press()}} style={styles.icon_box}>
-                    {d.icon}
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => {press()}} style={styles.stack2}>
-                        <Text style={styles.text}>{d.text}</Text>
-                    </TouchableOpacity>
-                </View>
-            ))
-        }
-      </View>
-      <Score_section4
-      modalVisible={modalVisible2}
-      setModalVisible={setModalVisible2}
-      />
-    </View>
-  )
-}
+
+    return (
+        <View style={styles.container}>
+            <View style={styles.stack_container}>
+                {Again.map((d) => (
+                    <View style={styles.stack} key={d.id}>
+                        <TouchableOpacity 
+                            onPress={d.text === 'Share Score' ? press : null} 
+                            style={styles.icon_box}
+                        >
+                            {d.icon}
+                        </TouchableOpacity>
+                        <TouchableOpacity 
+                            onPress={d.text === 'Share Score' ? press : null} 
+                            style={styles.stack2}
+                        >
+                            <Text style={styles.text}>{d.text}</Text>
+                        </TouchableOpacity>
+                    </View>
+                ))}
+            </View>
+            <Score_section4
+                modalVisible={modalVisible2}
+                setModalVisible={setModalVisible2}
+            />
+        </View>
+    );
+};
 
 export default Score_section3;
 
@@ -67,4 +72,4 @@ const styles = StyleSheet.create({
         color: '#ffffff',
         textAlign: 'center',
     }
-})
+});
